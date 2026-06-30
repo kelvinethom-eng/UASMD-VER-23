@@ -71,7 +71,7 @@ with col3:
     credit_mix = st.selectbox("Credit Mix", ["Bad", "Standard", "Good"], index=1)
     delay_due_date = st.number_input("Delay from due date (hari)", 0.0, value=5.0, step=1.0)
     num_delayed_payment = st.number_input("Num of Delayed Payment", 0.0, value=2.0, step=1.0)
-    credit_util_pct = st.number_input("Credit Utilization Ratio (%)", 0.0, 100.0, 45.0, 1.0)
+    credit_util = st.number_input("Credit Utilization Ratio (%)", 0.0, 100.0, 32.0, 1.0)
     changed_credit_limit = st.number_input("Changed Credit Limit", 0.0, value=2000.0, step=100.0)
     num_inquiries = st.number_input("Num Credit Inquiries", 0.0, value=4.0, step=1.0)
     payment_of_min_amount = st.selectbox("Payment of Min Amount", ["No", "Yes"], index=1)
@@ -101,7 +101,7 @@ if st.button("🔮 Prediksi Credit Score", type="primary", use_container_width=T
         "Credit_Mix": credit_mix,
         "Delay_from_due_date": delay_due_date,
         "Num_of_Delayed_Payment": num_delayed_payment,
-        "Credit_Utilization_Ratio": credit_util_pct / 100.0,
+        "Credit_Utilization_Ratio": credit_util,
         "Changed_Credit_Limit": changed_credit_limit,
         "Num_Credit_Inquiries": num_inquiries,
         "Payment_of_Min_Amount": payment_of_min_amount,
